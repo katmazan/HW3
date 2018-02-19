@@ -97,7 +97,7 @@ class TweetForm(FlaskForm):
         if field.data[0] == '@':
             raise ValidationError('Username cannot start with @')
     def validate_display_name(self, field):
-        if '' not in field.data:
+        if ' ' not in field.data:
             raise ValidationError('Display name must be two words')
 
     
